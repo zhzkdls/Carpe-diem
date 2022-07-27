@@ -10,7 +10,7 @@
 // console.log("hi, my name is " + myName);
 
 // myName = "nicolas";   // 변수 이름 변경 
-// console.log("your name is " + mfyName);
+// console.log("your name is " + myName);
 
 // ------------- Boolean -------------
 // const amIFat = true;
