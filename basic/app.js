@@ -32,6 +32,7 @@
 
 // const daysOfWeek = [mon, tue, wed, thu, fri, sat];
 // const nonsense = [1, 2, "hello", false, null, true, undefined];  // 다양한 데이터 타입이 들어갈 수 있다.
+
 // console.log(daysOfWeek);
 
 // console.log(daysOfWeek[4]);   // Get Item from Array
