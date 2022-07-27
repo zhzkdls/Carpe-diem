@@ -1,3 +1,4 @@
-# 기본 문법
+# JavaScript basic grammar 
+
 
 * ㅁㅁㅁ
