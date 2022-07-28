@@ -63,6 +63,8 @@ console.log(something);
 
 * **push** 는 항목 하나를 `array` 안에 추가를 해준다. 예제에서는 토요일까지만 나오게 되어있지만 `push` 사용해서 추가하게 되면 콘솔창에서 일요일까지 추가되서 나오게 된다.
 
+* **daysOfWeek[0] = "choma"** 라고 하면 `"mon"` 가 `"choma"`로 업데이트가 된다.
+
 * **요약** : `array`으 목적은 하나의 `variable` 안에 데이터 `list` 를 가지는 것이다.
 
 ```JavaScript
@@ -84,8 +86,12 @@ console.log(daysOfWeek);
 // Get Item from Array
 console.log(daysOfWeek[4]); 
 
+// 업데이트
+daysOfWeek[0] = "choma"
+
 // Add one more day to the Array
 daysOfWeek.push("sun"); 
+
 
 console.log(daysOfWeek);
 
@@ -119,3 +125,62 @@ player.lastName = "potato";  // 새로운 속성 추가
 console.log(player);
 
 ```
+
+## 📍 06 -  Function
+
+* **Function** 은 어떤 코드를 **캡슐화** 해서, 실행을 여러번 할수 있게 해주고, 특징은 `괄로()`가 필요하다. 그리고  `function`은 실행하게 될 `중괄호{}`가 필요하다.
+
+* 만약 내가  `sayHello`의 실행을 누를 떄마다 `console.log("Hello!");` 가 실행한다. 실행하는 방법은 이 `괄로()`가 실행하는 방법이다.
+
+* 예제에서는 첫번째 `argument`로 어떤 데이터가 들어오면 `name`, `age` 이라는 `variable` 이름, 나이를 쓰게 된다는 것이다. 또한 하나만 받는게 아니라 여러개를 받을수 있다.
+
+    * **argument(인수)** `function`을 실행하는 동안 어떤 정보를  `function` 에게 보낼수 있는 방법이다. 
+
+
+* **요약** : `sayHello function` 은 2개의 `argument` 를 받고 있다. 첫번째는 `string`이 되는것이고, 두번째는 `age`가 되는것이다. 물론 이 두가지 `name`과 `age`는 이 `()괄로`안에서만 존재한다. 또한 `function`의 `body`에만 존재한다.
+
+```JavaScript
+
+function sayHello(name, age){
+    console.log("Hello my name is " + name + " and I'm " + age + " years old!");
+}
+sayHello("ohjiwoo", 22);
+sayHello("nico", 23);
+sayHello("nomade", 21);
+sayHello("coder", 20);
+
+```
+
+* 02_예제
+
+```JavaScript
+
+function plus(firstNumber, secondNumber){  // 매개변수 순서 중요
+    console.log(firstNumber, secondNumber);  // 두 수를 단순히 출력
+    console.log(firstNumber + secondNumber);  // 두 수를 더해서 출력
+}
+function divide(a, b){  // 매개변수는 함수 내에서만 사용 가능
+    console.log(a / b);
+}
+plus(8, 60);
+divide(98, 20);
+
+```
+
+* 03_예제
+
+```JavaScript
+
+// player object
+const player = {
+    name: "jiwoo",
+    sayHello: function(otherPersonsName){
+        console.log("hello " + otherPersonsName + " nice to meet you!");
+    },
+};
+console.log(player.name);
+player.sayHello("lynn");
+
+```
+
+
