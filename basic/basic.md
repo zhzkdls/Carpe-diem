@@ -1,4 +1,0 @@
-# JavaScript basic grammar 
-
-
-* ㅁㅁㅁ
