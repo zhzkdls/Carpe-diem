@@ -54,30 +54,56 @@
 // console.log(player);
 
 // ------------- function -------------
-function sayHello(name, age){
-    console.log("Hello my name is " + name + " and I'm " + age + " years old!");
-}
-sayHello("ohjiwoo", 22);
-sayHello("nico", 23);
-sayHello("nomade", 21);
-sayHello("coder", 20);
+// function sayHello(name, age){
+//     console.log("Hello my name is " + name + " and I'm " + age + " years old!");
+// }
+// sayHello("ohjiwoo", 22);
+// sayHello("nico", 23);
+// sayHello("nomade", 21);
+// sayHello("coder", 20);
 
-function plus(firstNumber, secondNumber){  // 매개변수 순서 중요
-    console.log(firstNumber, secondNumber);  // 두 수를 단순히 출력
-    console.log(firstNumber + secondNumber);  // 두 수를 더해서 출력
-}
-function divide(a, b){  // 매개변수는 함수 내에서만 사용 가능
-    console.log(a / b);
-}
-plus(8, 60);
-divide(98, 20);
+// function plus(firstNumber, secondNumber){  // 매개변수 순서 중요
+//     console.log(firstNumber, secondNumber);  // 두 수를 단순히 출력
+//     console.log(firstNumber + secondNumber);  // 두 수를 더해서 출력
+// }
+// function divide(a, b){  // 매개변수는 함수 내에서만 사용 가능
+//     console.log(a / b);
+// }
+// plus(8, 60);
+// divide(98, 20);
 
-// player object
-const player = {
-    name: "jiwoo",
-    sayHello: function(otherPersonsName){
-        console.log("hello " + otherPersonsName + " nice to meet you!");
+// // player object
+// const player = {
+//     name: "jiwoo",
+//     sayHello: function(otherPersonsName){
+//         console.log("hello " + otherPersonsName + " nice to meet you!");
+//     },
+// };
+// console.log(player.name);
+// player.sayHello("lynn");
+
+// ------------- return -------------
+const calculator  = {
+    plus: function (a, b) {
+        return a + b;
+        //더하기
     },
+    minus: function(a,b) {
+        return a - b;
+        //빼기
+    },
+    divide: function(a,b) {
+        return a / b;
+        //나누기
+    },
+    times: function(a,b){
+        return a * b;
+        //곱하기
+    },
+    power: function(a,b){
+        return a ** b;
+        //제곱
+    }
+
 };
-console.log(player.name);
-player.sayHello("lynn");
+const plusResult = calculator.plus(2 + 3);
