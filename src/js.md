@@ -138,3 +138,47 @@ function onLoginBtnClick() {
 
 loginButton.addEventListener("click", onLoginBtnClick);
 ```
+
+## 📍 03 - Events
+
+
+* `Form`안에 있는 `input`의 버튼을 누르거나, `enter`를 눌러서 제출할 때마다 페이지가 새로고침된다. 브라우저가 기본적으로 설계되어 있기 때문이다. 이를 브라우저의 기본 행동. `Browser default`라고 부른다. 
+
+* `Function(){}` 이렇게 아노니머스 펑션을 쓰면 이 함수가 실행될 때 발생하는 `event`에 대한 아무런 정보도 얻을 수 없지만 `()안에` 공간을 만들어 주면 괄호안의 `argument`의 이름으로 `JS`가 발생한 `event`에 대한 `정보(object)`를 준다.
+>관행적으로, function(event){} 이렇게 쓴다.
+
+* `event.preventDefault();` 브라우저가 기본 동작을 실행하지 못하게 하고, `event object`는 `preventDefault함수`를 기본적으로 갖고 있다.
+
+* `submit` 이벤트가 발생한다면, `onLoginSubmit`함수를 실행시킨다는 의미이고, `JS`는 `onLoginSubmit`함수 호출시 인자를 담아서 호출하게 된다. 해당 인자는 `event object`를 담은 정보~!!.
+
+* **★ 중요 ★** : `form`을 `submit`하면 브라우저는 기본적으로 페이지를 새로고침 하도록 되어있다. 하지만 `preventDefault() `함수를 추가함으로써 브라우저의 기본 동작을 막을 수 있다!!
+
+* `preventDefault` 함수는 `EventListener` 함수의 '첫 번째 `argument`' 안에 있는 함수이다. 첫번째 `arument`는 지금 막 벌어진 `event`들에 대한 정보를 갖고 있다.
+
+* 기본적으로 `JS`는 `argument`를 담아서 함수를 호출하는데, `argument`가 기본 정보들을 제공하고 있다. 
+>누가 submit주체인지, 몇 시에 submit을 했는지 등등 콘솔에 출력해보면 알 수 있음
+
+
+* `loginForm.addEventListener('submit', onLoginSubmit);` 에서 `submit`이 발생하면 이 함수의 성격대로 `login input`을 누르자마자 새로고침이 실행된다. 
+
+* `onLoginSubmit` 함수에서 `preventDefault` 를 실행시키면, 새로고침 되는 것을 막아준다.
+>매개변수(parameter) 에 'event' 라고 넣고 함수 내용에 event에 대한preventDefault 를 해주면 해당하는 event에 대하여 submit의 기본동작을 멈추게 된다.
+
+* `console.log(loginInput.value);` 를 작성하면 `input`에 적었던 `value(이름)` 이 나온다.
+>버튼을 클릭하는 즉시 submit 되어 새로고침 (정보 증발)되는 것을 막고 유저의 이름을 저장하기 위해서 preventDefault 가 사용된다.
+
+
+```javascript
+
+const loginInput = document.querySelector("#login-form input");
+const loginForm = document.querySelector("#login-form")
+
+
+  function onLoginSubmit(event) {
+    event.preventDefault();
+    console.log(loginInput.value);
+  }
+
+loginForm.addEventListener("submit",onLoginSubmit);
+
+```
