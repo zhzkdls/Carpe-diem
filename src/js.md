@@ -44,7 +44,7 @@ loginButton.addEventListener("click", onLoginBtnClick);
 
 ```
 
-* **변경 후** : value는 보이지 않지만 input에 데이터를 적으면 콘솔창에서 value(글자)가 입력되는 것을 볼 수 있다.
+* **변경 후** : `value`는 보이지 않지만 `input`에 데이터를 적으면 콘솔창에서 `value`(글자)가 입력되는 것을 볼 수 있다.
 
 ```JavaScript
 
@@ -58,7 +58,7 @@ loginButton.addEventListener("click", onLoginBtnClick);
 
 ## 📍 02 - Form Submission 
 
-* 매번 loginInput.value를 적는 것 대신에 우리는 이걸로 변수로 만들어 줄꺼야 좋아 이제 value 값이 없을 경우 if문을 사용하여 클릭을 하면 콜솔을 사용해서 메시지를 나타나게 하자. 
+* 매번 `loginInput.value`를 적는 것 대신에 우리는 이걸로 변수로 만들어 줄꺼야 좋아 이제 `value` 값이 없을 경우 `if`문을 사용하여 클릭을 하면 콜솔을 사용해서 메시지를 나타나게 하자. 
 
 ```JavaScript
 
@@ -73,7 +73,7 @@ loginButton.addEventListener("click", onLoginBtnClick);
 
 ```
 
-* 이제 이걸 user가 볼수 있게 alert로 바꿔주자
+* 이걸 `user`가 볼수 있게 `alert`로 바꿔주자..
 
 ```JavaScript
 
@@ -88,12 +88,11 @@ loginButton.addEventListener("click", onLoginBtnClick);
 
 ```
 
-* 이번에는 여기에 else if 를 해주고 value를 확인할거야 suer 가 입력한 username을 뜻하는 value 말이지 변수명을 username으로 바꾸고 여기서 username이 15글자를 초과하지 않는지 확인할 수 있어
-즉 username이 15글자르 초과한다면 경고창을 보여줄꺼야 
+* `else if` 를 해주고 `value`를 확인한다 `user` 가 입력한 `username`을 뜻하는 `value` 말이지, 변수명을 `username`으로 바꾸고, 여기서 `username`이 `15글자`를 초과하지 않는지 확인할 수 있다. 즉 `username`이 15글자르 초과한다면 경고창을 보여준다. 
 
-* username.length가 string의 길이를 구할수 있어 즉 string 다음에 .length만 입력해 주면 되는거야
+* `username.length`가 `string`의 길이를 구할수 있어 즉 `string` 다음에 `.length`만 입력해 주면 된다.
 
-* 만약 username의 길이가 15보다 길다면, 이름이 너무 길다고 alert을 해줄꺼야 
+* 만약 `username`의 길이가 15보다 길다면, 이름이 너무 길다고 `alert`을 해준다. 
 
 ```JavaScript
 
@@ -111,12 +110,12 @@ loginButton.addEventListener("click", onLoginBtnClick);
 ```
 
 
-* input을 필수입력 항목으로 만들어 줄수 있다. 또는 input 자체적으로 최대 글자수를 15로 조절할수도 있다.
+* `input`을 필수입력 항목으로 만들어 줄수 있다. 또는 `input` 자체적으로 최대 글자수를 `15`로 조절할수도 있다.
 
-* HTML에 이미 구현된 기능(인풋의 유효성검사)이 있으니 그걸 사용하면 된다. input의 유효성 검사를 작동시키기 위해서는 input이 form안에 있어야 된다는 걸 기억해야한다.
+* `HTML`에 이미 구현된 기능(인풋의 유효성검사)이 있으니 그걸 사용하면 된다. `input`의 유효성 검사를 작동시키기 위해서는 `input`이 `form`안에 있어야 된다는 걸 기억해야한다.
 >따라서 div를 form으로 수정
 
-* form 태그 안에 들어있는 button을 누르거나, type이 submit인 input을 클릭하면 내가 작성한 form이 submit된다. 즉 엔터키를 누르건 버튼을 누르건 (의 기본값이 submit.) 무조건 'submit' 이 일어난다.
+* `form` 태그 안에 들어있는 `button`을 누르거나, `type`이 `submit`인 `input`을 클릭하면 내가 작성한 `form`이 `submit`된다. 즉 엔터키를 누르건 버튼을 누르건 (의 기본값이 `submit`.) 무조건 **'submit'** 이 일어난다.
 > 근거: console.log(loginInput.value) 가 실행이 안됨 + browser 가 새로고침을 한다.
 >암튼 문제는 form이 submit되면서 내용이 날라가서 user정보를 저장할 수가 없게 됨!
 
