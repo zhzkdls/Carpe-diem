@@ -1,4 +1,4 @@
- ## 📍 01 - Input Values
+ # 📍 01 - Input Values
 
 * **querySelector()** 를 사용할 때는 대상이 `id`인지 명확히 해줘야 한다. 왜냐하면 `querySelector()`로는 `classname`, `tagname` 모두 검색 가능하니깐. 하지만 `getElementById()`를 사용할 때는 그럴 필요가 없다. **WHY??** `JavaScript`가 `id`를 찾고 있다는 걸 이미 알고 있기 떄문이다.
 
@@ -56,7 +56,7 @@ loginButton.addEventListener("click", onLoginBtnClick);
 
 ```
 
-## 📍 02 - Form Submission 
+# 📍 02 - Form Submission 
 
 * 매번 `loginInput.value`를 적는 것 대신에 우리는 이걸로 변수로 만들어 줄꺼야 좋아 이제 `value` 값이 없을 경우 `if`문을 사용하여 클릭을 하면 콜솔을 사용해서 메시지를 나타나게 하자. 
 
@@ -139,13 +139,16 @@ function onLoginBtnClick() {
 loginButton.addEventListener("click", onLoginBtnClick);
 ```
 
-## 📍 03 - Events
+
+# 📍 03 - Events 
+
+### Events part One
 
 
 * `Form`안에 있는 `input`의 버튼을 누르거나, `enter`를 눌러서 제출할 때마다 페이지가 새로고침된다. 브라우저가 기본적으로 설계되어 있기 때문이다. 이를 브라우저의 기본 행동. `Browser default`라고 부른다. 
 
 * `Function(){}` 이렇게 아노니머스 펑션을 쓰면 이 함수가 실행될 때 발생하는 `event`에 대한 아무런 정보도 얻을 수 없지만 `()안에` 공간을 만들어 주면 괄호안의 `argument`의 이름으로 `JS`가 발생한 `event`에 대한 `정보(object)`를 준다.
->관행적으로, function(event){} 이렇게 쓴다.
+  * 관행적으로, function(event){} 이렇게 쓴다.
 
 * `event.preventDefault();` 브라우저가 기본 동작을 실행하지 못하게 하고, `event object`는 `preventDefault함수`를 기본적으로 갖고 있다.
 
@@ -156,16 +159,16 @@ loginButton.addEventListener("click", onLoginBtnClick);
 * `preventDefault` 함수는 `EventListener` 함수의 '첫 번째 `argument`' 안에 있는 함수이다. 첫번째 `arument`는 지금 막 벌어진 `event`들에 대한 정보를 갖고 있다.
 
 * 기본적으로 `JS`는 `argument`를 담아서 함수를 호출하는데, `argument`가 기본 정보들을 제공하고 있다. 
->누가 submit주체인지, 몇 시에 submit을 했는지 등등 콘솔에 출력해보면 알 수 있음
+  * 누가 submit주체인지, 몇 시에 submit을 했는지 등등 콘솔에 출력해보면 알 수 있음
 
 
 * `loginForm.addEventListener('submit', onLoginSubmit);` 에서 `submit`이 발생하면 이 함수의 성격대로 `login input`을 누르자마자 새로고침이 실행된다. 
 
 * `onLoginSubmit` 함수에서 `preventDefault` 를 실행시키면, 새로고침 되는 것을 막아준다.
->매개변수(parameter) 에 'event' 라고 넣고 함수 내용에 event에 대한preventDefault 를 해주면 해당하는 event에 대하여 submit의 기본동작을 멈추게 된다.
+  * 매개변수(parameter) 에 'event' 라고 넣고 함수 내용에 event에 대한preventDefault 를 해주면 해당하는 event에 대하여 submit의 기본동작을 멈추게 된다.
 
 * `console.log(loginInput.value);` 를 작성하면 `input`에 적었던 `value(이름)` 이 나온다.
->버튼을 클릭하는 즉시 submit 되어 새로고침 (정보 증발)되는 것을 막고 유저의 이름을 저장하기 위해서 preventDefault 가 사용된다.
+  * 버튼을 클릭하는 즉시 submit 되어 새로고침 (정보 증발)되는 것을 막고 유저의 이름을 저장하기 위해서 preventDefault 가 사용된다.
 
 
 ```javascript
@@ -180,5 +183,47 @@ const loginForm = document.querySelector("#login-form")
   }
 
 loginForm.addEventListener("submit",onLoginSubmit);
+
+```
+
+### Events part Two
+
+* nomadcoders.co로 연결되는 anchor요소를 하나 만들어 줄거야. 그럼 노마드 코더 사이트로 이동하게 된다. 자 다시 한번 js를 이용해서 기본 동작을 막아볼거야 전에말했듯이 js는 우리가 기본동작을 막는 것을 허용해 part One에서는 from 의 기본 동작은 submit이라는 걸 배웠어. 그럼 링크의 기본 동작은 뭘까? 링크의 기본 동작은 클릭시 다른 페이지로 이동하는 거야. 
+
+```html
+
+<form id="login-form">
+  <input
+    required
+    maxlength="15" 
+    type="text" 
+    placeholder="이름을 적어주세요" />
+  <input type="submit" value="로그인" />
+</form>
+<a href="http://nomadcoders.co">가즈아~!!</a>
+
+```
+
+* alert을 사용하여 
+
+```javascript
+
+const loginInput = document.querySelector("#login-form input");
+const loginForm = document.querySelector("#login-form")
+
+const link = document.querySelector("a")
+
+  function onLoginSubmit(event) {
+    event.preventDefault();
+    console.log(loginInput.value);
+  }
+
+  function handleLinkClick(event) {
+    alert("Clicked!!");
+  } 
+
+loginForm.addEventListener("submit",onLoginSubmit);
+link.addEventListener("click", handleLinkClick);
+
 
 ```
