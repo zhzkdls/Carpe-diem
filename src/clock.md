@@ -21,7 +21,8 @@
     >모두 같다.
 
 * **요약** 
-    >`interval` : 매초마다 실행하기
+    >`interval` : 매초마다 실행하기 
+    <br>
     >`setInterval`(실행시킬 함수, 시간 간격)
 
 ```javascript
