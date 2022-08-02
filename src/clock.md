@@ -21,9 +21,8 @@
     >모두 같다.
 
 * **요약** 
-    >`interval` : 매초마다 실행하기 
-    <br>
-    >`setInterval`(실행시킬 함수, 시간 간격)
+    * `interval` : 매초마다 실행하기 
+    * `setInterval`(실행시킬 함수, 시간 간격)
 
 ```javascript
 const clock = document.querySelector("h2#clock");
