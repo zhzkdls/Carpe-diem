@@ -10,21 +10,24 @@
     <title>Momentum App</title>
 </head>
 <body>
-  <h2 id="clock">00:00</h2>
+  <h2 id="clock">00:00.00</h2>
   <form class="hidden" id="login-form">
     <input
       required
-      maxlength="15" 
-      type="text" 
-      placeholder="이름을 적어주세요" />
-    <button type="submit" id="continue">
-      Continue
-      <i class="fa-solid fa-angle-right"></i>
-    </button>
+      maxlength="15"
+      type="text"
+      placeholder="What is your name?"
+    />
+    <input type="submit" value="Log In" />
   </form>
   <h1 id="greeting" class="hidden"></h1>
+  <div id="quote">
+    <span></span>
+    <span></span>
+  </div>
   <script src="src/js/login.js"></script>
   <script src="src/js/clock.js"></script>
+  <script src="src/js/quotes.js"></script>
 </body>
 </html>
 
