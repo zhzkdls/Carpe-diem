@@ -30,19 +30,6 @@ navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError);
 
 ## 📍 01 - Weather API 
 
-* 콘솔창을 보면 좌표가 나온다
-    > latitude(앞) = 35.1302104
-    > longitude(뒤) = 128.9772311
-
-* WEATHER API_KEY
-    > API_KEY = "55900f672924fe463c8656c8ba77ccc6";
-
-    ```javascript
-    `https://api.openweathermap.org/data/2.5/weather?lat=앞&lon=뒤&appid=API_KEY&units=metric`;
-    ```
-
-* units=metric은 온도 섭씨를 보여준다. promise 는 당장 뭔가 일어나지 않고 시간이 좀 걸린 뒤에 일어나는 거야
-
 
 
 ```javascript
