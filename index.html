@@ -11,39 +11,47 @@
     <title>Momentum App</title>
 </head>
   <body>
-    <h2 id="clock">00:00:00</h2>
-    <form class="hidden" id="login-form">
-      <input
-        required
-        maxlength="15"
-        type="text"
-        placeholder="What is your name?"
-      />
-      <input type="submit" value="Log In" />
-    </form>
-    <h1 class="hidden" id="greeting"></h1>
-    <form id="todo-form">
-      <input type="text" placeholder="Write a To Do and Press Enter" required />
-    </form>
-    <ul id="todo-list"></ul>
-    <div id="quote">
-      <span></span>
-      <span></span>
-    </div>
-    <div id="weather">
-      <span></span>
-      <span></span>
-    </div>
-    <div id="weather">
-      <span></span>
-      <span></span>
+    <div class="wrap">
+      <video class="bg_video" autoplay loop muted>
+          <source src="" type="video/mp4">
+      </video>
+
+      <div class="container">
+          <section class="info">
+              <article class="weather">
+                  <span></span>
+                  <span></span>
+              </article>
+
+              <article class="date">
+                  <p class="date_today">2022.03.20 SUN</p>
+                  <h2 class="date_time">00:00:00</h2>
+              </article>
+          </section>
+
+          <section id="main">
+              <header id="header">
+                  <form id="login_form" class="hidden">
+                      <input required maxlength="20" type="text" placeholder="Write a name and Press Enter" />
+                  </form>
+
+                  <div id="login_info">
+                      <h1 class="greeting"></h1>
+                      <button class="btn_logout"></button>
+                  </div>
+              </header>
+              
+              <footer class="quotes">
+                  <p class="quote"></p>
+              </footer>
+          </section>
+      </div>
     </div>
     <script src="src/js/login.js"></script>
     <script src="src/js/clock.js"></script>
-    <script src="src/js/quotes.js"></script>
+    <!-- <script src="src/js/quotes.js"></script> -->
     <script src="src/js/background.js"></script>
-    <script src="src/js/todo.js"></script>
+    <!-- <script src="src/js/todo.js"></script> -->
     <!-- <script src="src/js/weather.js"></script> -->
   </body>
 </html>
-
