@@ -96,13 +96,7 @@
     cursor: pointer;
 }
 
-.info {
-    /* display: flex;
-    flex-flow: row wrap;
-    align-content: flex-end; */
-    width: 50%;
-    height: auto;
-}
+
 
 .weather span {
     font-size: 1.25rem;
@@ -125,16 +119,6 @@
     font-size: 8rem;
     font-weight: 500;
     letter-spacing: -5px;
-}
-
-#main {
-    /* display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-end; */
-    width: 50%;
-    height: auto;
-    text-align: right;
-    /* background: tomato; */
 }
 
 .quotes {

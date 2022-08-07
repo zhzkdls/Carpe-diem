@@ -1,47 +1,56 @@
 const quotes = [
     {
-      quote: "I can do everything through him who gives me strength.",
-      author: "Philippians 4:13",
+      quote: "훌륭한 패자가 되는 것은 이기는 방법을 배우는 것이다.",
+      author: "칼 샌드버그",
     },
     {
-      quote: "Take my yoke upon you and learn from me, for I am gentle and humble in heart, and you will find rest for your souls. ",
-      author: "Matthew 11:29",
+      quote: "영리함이 현명함은 아니다.",
+      author: "에우리피데스",
     },
     {
-      quote:
-        "for wisdom is more precious than rubies, and nothing you desire can compare with her. ",
-      author: "Proverbs 8:11",
+      quote: "면전의 아첨꾼과 배후의 험담꾼은 똑같다.",
+      author: "알프레드 테니슨",
     },
     {
-      quote: "Do not be anxious about anything, but in everything, by prayer and petition, with thanksgiving, present your requests to God.",
-      author: "Philippians 4:6 ",
+      quote: "진실한 말 한미디는 연설만큼 위력이 있다.",
+      author: "찰스 디킨스",
     },
     {
-      quote: "And we know that in all things God works for the good of those who love him, who have been called according to his purpose.",
-      author: "Romans 8:28",
+      quote: "명성과 성공을 혼돈하지 말라.",
+      author: "에르마 봄벡",
     },
     {
-      quote: "but those who hope in the LORD will renew their strength. They will soar on wings like eagles they will run and not grow weary, they will walk and not be faint.",
-      author: "Isaiah 40:31",
+      quote: "성공은 동료들에 대한 용서받지 못할 죄이다.",
+      author: "앰브로즈 비어스",
     },
     {
-      quote: "Call to me and I will answer you and tell you great and unsearchable things you do not know.",
-      author: "Jeremiah 33:3",
+      quote: "우정은 두 몸에 사는 하나의 영혼이다.",
+      author: "아리스토텔레스",
     },
     {
-      quote: "Jesus answered, I am the way and the truth and the life. No one comes to the Father except through me.",
-      author: "john 14:6  ",
+      quote: "우정과 돈은 물과 기름 같다.",
+      author: "마리오 푸조",
     },
     {
-      quote: "I have told you these things, so that in me you may have peace. In this world you will have trouble. But take heart! I have overcome the world. ",
-      author: "john 16:33",
+      quote: "모든 사람에게 친구인 사람은 누구에게도 친구가 아니다.",
+      author: "아리스토텔레스",
     },
-  ];
+    {
+      quote: "모든일이 그렇다. 쉽기 전에는 어렵다.",
+      author: "토마스 풀러",
+    },
+];
   
-  const quote = document.querySelector("#quote span:first-child");
-  const author = document.querySelector("#quote span:last-child");
-  const todaysQuote = quotes[Math.floor(Math.random() * quotes.length)];
+  // const quote = document.querySelector("#quote span:first-child");
+  // const author = document.querySelector("#quote span:last-child");
+  // const todaysQuote = quotes[Math.floor(Math.random() * quotes.length)];
   
-  quote.innerText = todaysQuote.quote;
-  author.innerText = todaysQuote.author;
+  // quote.innerText = todaysQuote.quote;
+  // author.innerText = todaysQuote.author;
+
+const quote = document.querySelector(".quote");
+const author = document.querySelector(".author");
+const todaysQuote = quotes[Math.floor(Math.random() * quotes.length)];
+
+quote.innerText = `${todaysQuote.quote} -${todaysQuote.author}-`;
 

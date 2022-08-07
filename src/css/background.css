@@ -1,6 +1,6 @@
 /* 사진을 배경이미지로 넣고 싶다면 */
 
-img {
+/* img {
     position:absolute;
     width:100%;
     height:100%;
@@ -10,6 +10,83 @@ img {
     bottom:0px;
     z-index: -1;
     opacity:80%;
-}
+} */
 
 /* 설정 하시면 됩니다. opacity는 취향대로 하시면 되고 z-index는 text의 z-index 보다 낮으면 뒷 배경으로 설정 됩니다 */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Noto Sans KR', 'sans-serif';
+    font-size: 15px;
+    color: #fff;
+    letter-spacing: -0.5px;
+    line-height: 100%;
+    list-style: none;
+    vertical-align: baseline;
+    background: transparent;
+    transition: all .3s ease-in-out;
+}
+
+.bg_video {
+    width: 100vw;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.wrap {
+    overflow: hidden;
+    width: 100vw;
+    max-width: 100%;
+    height: 100vh;
+}
+
+.wrap::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(5, 5, 5, 0.295);
+}
+
+.container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 70px;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.info {
+    width: 50%;
+    height: auto;
+}
+
+.quotes {
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.quotes p {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+
+
+
