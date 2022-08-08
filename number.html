@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+</head>
+<body>
+    <h1>랜덤숫자 게임</h1>
+    <div id="input1">
+        <label>How Many Time You Want to Guess?</label><br>
+        <input type="number" id="iter"><br>
+
+        <label>Your Guess Range?</label><br>
+        <input type="number" id="iter"><br><br>
+    </div>
+
+    <button id="start">Play Game</button>
+    <button id="reset" style = "display:none">Reset</button><br><br>
+
+    <div id="gameFieid" style = "display:none">
+        <div id="input2">
+            <label>Enter a Random Number Between 0 - <span id="rangeLimit"></span>:</label><br>
+            <input type="number" id="num">
+            <button id="submit">Submit</button><br>
+        </div>
+
+        <p id="msg"></p>
+        <p id="res"></p>
+
+    </div>
+
+    <script src="./game.js"></script>
+</body>
+</html>
+
+<!-- <h1>랜덤 숫자 게임</h1> -->
+<!-- <h2>a number between 0 and <input type="number"></h2>
+
+<h3>Click the button to start thr game : <input type="number"></h3>
+
+<button onclick="guessNumber()">Play Game</button>
+<script src="./game.js"></script> -->
