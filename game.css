@@ -5,7 +5,13 @@
     box-sizing: border-box;
 }
 
-body, .result, .heading, .sub_heading, .game_subtitle {
+.game_subtitle,
+.good,
+.heading,
+.num_go,
+.result,
+.sub_heading,
+body {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -20,7 +26,7 @@ body {
     background-color: azure;
     padding: 1rem;
     border-radius: 1rem;
-    box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.35);
+    box-shadow: 0 0 10px rgb(0, 0, 0, 0.35);
 
     display: grid;
     grid-template-columns: 15vw 15vw 15vw 15vw;
@@ -29,20 +35,22 @@ body {
     grid-column-gap: 2rem;
 }
 
-.container > div, p, h1, h4, input {
+.container > div,
+h1,
+h4,
+input,
+p {
     padding: 1rem;
     background-color: rgba(128,128,128,0.2);
     color: rgb(65, 65, 65);
     border-radius: 1rem;
 }
 
-/* 실패 || 성공 */
 .container .result {
     background-image: linear-gradient(to right, rgb(101, 197, 168), rgb(76, 157, 173));
     grid-row-start: 1;
     grid-row-end: 3;
 }
-
 
 .container .result .resul {
     background: none;
@@ -50,7 +58,6 @@ body {
     font-size: 40px;
 }
 
-/* 리얼 업데이트 */
 .container .selection {
     background-image: linear-gradient(to right, rgb(101, 197, 168), rgb(76, 157, 173));
     grid-row-start: 3;
@@ -62,7 +69,6 @@ body {
     color: aliceblue;
     font-size: 25px;
 }
-
 
 .container .heading {
     grid-column-start: 2;
@@ -82,4 +88,20 @@ body {
     font-size: 40px;
 }
 
+.container .good {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    font-size: 50px;
+}
 
+.container .num_go {
+    font-size: 50px;
+}
+
+.container .game_input {
+    font-size: 20px;
+}
+
+.container .button {
+    font-size: 10px;
+}
