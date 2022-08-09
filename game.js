@@ -1,28 +1,49 @@
-const input1 = document.getElementById("input1");
-const iteratlons = document.getElementById("iter");
+const subtitle = document.querySelector(".game_subtitle");
+const num = document.querySelector(".num_go");
 
+// 선택한 숫자 + 랜덤 숫자
+const textSelect = document.querySelector(".selection span");
+const textResult = document.querySelector(".result span");
 
+// 결과를 나타내는 글자(3)
+const game_form = document.querySelector(".game_form");
+const formInput = game_form.querySelector(".game_input");
 
+// 0 ~ 50까지 숫자 설정
+function handleRange() {
+    const maxRange = num.value;
+    formInput.value = "";
+    formInput.setAttribute("max", maxRange);
+}
 
+// 랜덤 숫자 생성
+function createRandomNumber() {
+    const randomRange = parseInt(num.value) + 1;
+    const number = Math.floor(Math.random() * randomRange);
+    return number;
+}
 
-// 버젼 1
+function textSelectHeading(input, answer) {
+    textSelect.innerText = `You chose ${input}, the machine chose ${answer}.`;
+}
 
-// function guessNumber() {
-//     let randomNum = Math.floor(Math.random() * 40);
-    
-//     // output to the cosole for debugging
-//     console.log(randomNum);
-//     // declare a variable
-//     let guess;
-//     guess = prompt("제발 0~40 사이에 숫자를 적어주세요")
-//     // console.log("나의 숫자는 : " + guess);
-//     if (guess < randomNum) {
-//         window.alert("너무 낮아");
-//     } else if (guess > randomNum) {
-//         window.alert("너무 높아");
-//     } else if (guess == randomNum) {
-//         window.alert("너가 이겼어~!!");
-//     } else {
-//         window.alert("에러!!!!!!!!");
-//     }
-// }
+function textResultHeading(input, answer) {
+    if (parseInt(input) === parseInt(answer)) {
+        textResult.innerText = "You Win!";
+    } else 
+        textResult.innerText = "You Lost!";
+    }
+
+function handleSubmit(event) {
+    event.preventDefault();
+    const input = formInput.value;
+    const answer = createRandomNumber();
+    textSelectHeading(input, answer);
+    textResultHeading(input, answer);
+}
+
+function init() {
+    num.addEventListener("input", handleRange);
+    game_form.addEventListener("submit", handleSubmit);
+}
+init();

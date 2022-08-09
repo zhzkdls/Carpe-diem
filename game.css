@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: product sans;
+    box-sizing: border-box;
+}
+
+body, .result, .heading, .sub_heading, .game_subtitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body {
+    min-height: 100vh;
+    background-image: linear-gradient(to right, rgb(101, 197, 168), rgb(76, 157, 173));
+}
+
+.container {
+    background-color: azure;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.35);
+
+    display: grid;
+    grid-template-columns: 15vw 15vw 15vw 15vw;
+    grid-template-rows: 10vw 10vw 10vw 10vw;
+    grid-row-gap: 1rem;
+    grid-column-gap: 2rem;
+}
+
+.container > div, p, h1, h4, input {
+    padding: 1rem;
+    background-color: rgba(128,128,128,0.2);
+    color: rgb(65, 65, 65);
+    border-radius: 1rem;
+}
+
+/* 실패 || 성공 */
+.container .result {
+    background-image: linear-gradient(to right, rgb(101, 197, 168), rgb(76, 157, 173));
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+
+.container .result .resul {
+    background: none;
+    color: aliceblue;
+    font-size: 40px;
+}
+
+/* 리얼 업데이트 */
+.container .selection {
+    background-image: linear-gradient(to right, rgb(101, 197, 168), rgb(76, 157, 173));
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+.container .selection .select {
+    background: none;
+    color: aliceblue;
+    font-size: 25px;
+}
+
+
+.container .heading {
+    grid-column-start: 2;
+    grid-column-end: 5;
+    font-size: 50px;
+}
+
+.container .game_subtitle {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    font-size: 35px;
+}
+
+.container .sub_heading {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    font-size: 40px;
+}
+
+
