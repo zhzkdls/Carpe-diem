@@ -1,36 +1,16 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8"/>
-        <title>Momentom</title>
-        <link rel="stylesheet" href="game.css">
-    </head>
-    <body>
-        <div class="container">
-            <h1 class="heading">Random Number Game</h1>
-
-            <h4 class="game_subtitle">
-                Number between 0 and
-            </h4>
-            <input class="num_go" type="number" min="0" max="100" required="required"/>
-
-            <h4 class="sub_heading">Guess the number
-            </h4>
-            <div>
-                <form class="game_form">
-                    <input class="game_input" type="number" min="0" max="100" required="required"/>
-                    <input class="button" type="submit" value="Play!"/>
-                </form>
-            </div>
-            <p class="good">🙋🏻 GOOD GAME 🙋🏻</p>
-            <div class="selection">
-                <span class="select"></span>
-            </div>
-            <br>
-            <div class="result">
-                <span class="resul"></span>
-            </div>
-        </div>
-        <script src="./game.js"></script>
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="game.css">
+    <title>Christmas Time</title>
+</head>
+<body>
+    <!-- 디데이를 나타내줄 태그에 id 값을 지정해준다. -->
+    <h1>Time Untill Christmas</h1>
+    <h2 id="remain-time"></h2>
+    <script src="./game.js"></script>
+</body>
 </html>
