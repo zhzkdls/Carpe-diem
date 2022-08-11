@@ -1,18 +1,27 @@
-const remainTime = document.querySelector("#data-time");
+const body = document.querySelector("body"); // 태그를 호출한다.
+const btn = document.querySelector("button");
 
-function dyDay() {
-  const masTime = new Date("2022-12-25");
-  const todayTime = new Date();
+const colors = [
+  "#96FFFF	",
+  "#B4C3FF",
+  "#B7A4EE",
+  "#B0A0CD",
+  "#3CA0E1",
+  "#5A78AF",
+  "#91F8D0",
+  "#9EF048",
+  "#FFCAD5",
+  "#FFAAFF",
+  "#FFA778",
+  "#F06E6E",
+  "#975a97",
+  "#F49A56",
+  "#FF4646"
+];
 
-  const dy = masTime - todayTime;
-
-  const dyDay = Math.floor(dy / (1000 * 60 * 60 * 24));
-  const dyHour = Math.floor((dy / (1000 * 60 * 60)) % 24);
-  const dyMin = Math.floor((dy / (1000 * 60)) % 60);
-  const dySec = Math.floor((dy % (1000 * 60)) / 1000);
-
-  remainTime.innerText = `${dyDay}일 ${dyHour}시간 ${dyMin}분 ${dySec}초`;
-}
-
-dyDay();
-setInterval(dyDay, 1000);
+function onClickHandler() {
+    const color1 = colors[Math.floor(Math.random() * colors.length)]; // 순서를 랜덤으로 만들기
+    const color2 = colors[Math.floor(Math.random() * colors.length)]; 
+    body.style.backgroundImage = `linear-gradient(0.25turn, ${color1}, ${color2})`; // 랜덤으로 배열 안의 컬러를 선택한다.
+} 
+btn.addEventListener("click", onClickHandler); // function 뒤에 ()가 없다.
