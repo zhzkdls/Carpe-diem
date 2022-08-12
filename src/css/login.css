@@ -1,20 +1,21 @@
 .hidden {
-    display: none;
-  }
-
-.greeting {
-    padding: 0 5px;
-    width: calc(100% - 30px);
-    display: inline-block;
-    font-size: 1.5rem;
-    font-weight: 500;
-    text-align: start;
+  display: none;
 }
 
+.greeting {
+  padding: 0 5px;
+  width: calc(100% - 30px);
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: left;
+}
+
+/* 로그아웃 아이콘 */
 .btn_logout {
-  width: 30px;
-  height: 30px;
-  background: url(../img/logout.png) no-repeat;
+  width: 25px;
+  height: 25px;
+  background: url(../img/logouts.png) no-repeat;
   background-size: cover;
   cursor: pointer;
 }
@@ -23,12 +24,7 @@
   font-size: 1.25rem;
   line-height: 1.5;
   padding: 5px;
-  width: 70%;
+  width: 150%;
   border-bottom: 1px solid #fff;
-}
-
-#login_info {
-  display: flex;
-  flex-flow: row wrap;
 }
 
