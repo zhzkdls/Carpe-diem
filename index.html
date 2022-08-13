@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-
     <head>
         <meta charset="UTF-8">
         <title>CHOMA</title>
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-            <link rel="icon" href="./assets/MSK Icon.png" type="image/png">
-            
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,700;0,900;1,400&family=Montserrat:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+        <!-- End of Fonts -->
+        
+        <!-- CSS Import -->
         <link rel="stylesheet" href="src/css/style.css">
         <!-- <link rel="stylesheet" href="src/css/clock.css"/> -->
         <link rel="stylesheet" href="src/css/login.css"/>
         <link rel="stylesheet" href="src/css/background.css"/>
         <link rel="stylesheet" href="src/css/weather.css"/>
-        <link rel="stylesheet" href="src/css/quotes.css"/>
+        <link rel="stylesheet" href="src/css/todoList.css"/>
+        <!-- End of CSS Import -->
     </head>
     <body>
         <div class="wrap">
@@ -48,7 +50,7 @@
                             <!-- 로그아웃 -->
                             <div>
                                 <button class="btn_logout"></button>
-                            </div>
+                            </div> 
                             
                             
                     </div>
@@ -56,18 +58,7 @@
                         <!-- 사이드 -->
                         <div class="left-side">
                             <div class="side-wrapper">
-                                
-                                <!-- 사이드 카드 조정하기 -->
-                                <div class="side-card">
-                                    <span>
-                                        오늘의 명언
-                                    </span>
-                                    <div class="app-card__subtext">
-                                        오늘 하루도 고생했다 짜식아~!!
-                                    </div>
-                                </div>
 
-                                <br>
                                 <!-- 사이드 카드 조정하기 -->
                                 <div class="side-card">
                                     <span>
@@ -98,15 +89,14 @@
                                 </div>
 
                                 <br>
-                                <div class="content-wrapper-header">
+                                <div class="side-card">
                                     <!-- 명언 -->
-                                    <div class="content-wrapper-context">
                                         <h3 class="img-content">
                                             오늘의 명언
                                         </h3><br>
                                         <p class="quotes"></p>
                                         <p class="quote"></p>
-                                    </div>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -164,42 +154,59 @@
                                 </div>
                                 
                                 <div class="content-section">
-                                    <div class="content-section-title">Apps in your plan</div>
-                                    <div class="apps-card">
-                                        <div class="app-card">
-                                            <span>
+                                    <div class="content-section-title">TODO LIST</div>
+                                    <div class="todos-card">
+                                        <div class="todo-card">
+                                            <!-- App Wrapper -->
+                                            <main class="toDo">
+                                                <!-- New Todo -->
+                                                <section class="create-todo">
+                                                    <h3>CREATE A TODO</h3>
+                                                    <form id="new-todo-form">
+                                                        <input 
+                                                            type="text" 
+                                                            placeholder="e.g. Get some milk"
+                                                            name="content"
+                                                            id="content" />
+                                                        
+                                                        <h3>Pick a category</h3>
+                                                        <div class="options">
+                                                            <label>
+                                                                <input type="radio" name="category" id="category1" value="business" /> 
+                                                                <span class="bubble business"></span>
+                                                                <div>Business</div>
+                                                            </label>
+                                                            <label>
+                                                                <input type="radio" name="category" id="category2" value="personal" />
+                                                                <span class="bubble personal"></span>
+                                                                <div>Personal</div>
+                                                            </label>
+                                                        </div>
 
-                                                Premiere Pro
-                                            </span>
-                                            <div class="app-card__subtext">Edit, master and create fully proffesional videos</div>
-                                            <div class="app-card-buttons">
-                                                <button class="content-button status-button">Update</button>
-                                                
-                                            </div>
+                                                        <input type="submit" value="Add todo" />
+                                                    </form>
+                                                </section>
+                                                <!-- End of New Todo -->
+
+                                                <!-- Todo List -->
+                                                <section class="todo-list">
+                                                    <h3>TODO LIST</h3>
+                                                    <div class="list" id="todo-list"></div>
+                                                </section>
+                                                <!-- End of Todo List -->
+
+                                            </main>
+                                            <!-- End of App Wrapper -->
+                                            
                                         </div>
-                                        <div class="app-card">
-                                            <span>
-                                                InDesign
-                                            </span>
-                                            <div class="app-card__subtext">Design and publish great projects & mockups</div>
-                                            <div class="app-card-buttons">
-                                                <button class="content-button status-button">Update</button>
-                                               
-                                            </div>
+
+                                        <div class="todo-card">
+                                            <h1>sdfsdf</h1>
                                         </div>
-                                        <div class="app-card">
-                                            <span>
-                                                After Effects
-                                            </span>
-                                            <div class="app-card__subtext">Industry Standart motion graphics & visual effects</div>
-                                            <div class="app-card-buttons">
-                                                <button class="content-button status-button">Update</button>
-                                                
-                                            </div>
-                                        </div>
+
                                     </div>
                                 </div>
-                                
+
                             </div>
                         </div>
                     </div>
@@ -211,7 +218,7 @@
         <!-- <script src="src/js/clock.js"></script> -->
         <script src="src/js/quotes.js"></script>
         <script src="src/js/background.js"></script>
-        <!-- <script src="src/js/todo.js"></script> -->
+        <script src="src/js/todoList.js"></script>
         <script src="src/js/weather.js"></script>
     </body>
 </html>
