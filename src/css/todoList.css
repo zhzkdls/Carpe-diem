@@ -244,3 +244,38 @@ input:checked ~ .bubble::after {
 	text-decoration: line-through;
 	color: var(--grey);
 }
+
+
+/* Todo 카드 */
+.todos-card {
+    display: flex;
+    /* align-items: center; */
+    flex-wrap: wrap;
+    width: calc(100% + 600px);
+}
+
+.todo-card {
+    display: flex;
+    flex-direction: column;
+    width: calc(33.3% - 20px);
+    font-size: 16px;
+    background-color: var(--content-bg);
+    border-radius: 14px;
+    border: 1px solid var(--theme-bg-color);
+    padding: 20px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.todo-card:hover {
+    transform: scale(1.02);
+    background-color: var(--theme-bg-color);
+}
+
+.todo-card + .todo-card {
+    margin-left: 20px;
+}
+
+.todo-card span {
+    display: flex;
+    align-items: center;
+}
