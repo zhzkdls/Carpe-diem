@@ -154,7 +154,7 @@ body.light-mode:before {
 }
 
 .wrapper {
-    display: flex;
+    display: block;
     flex-grow: 1;
     overflow: hidden;
 }
